@@ -15,54 +15,30 @@ ATTRIBUTES
 	
 	const int pi = HALF_CIR;
 OPERATIONS
-	/*double deg_to_reg(double in_value)
-	{
-		double return_result;
-		return_result = in_value / DEG_PI;
-		return_result = return_result* HALF_CIR;
-		return return_result;
+	int math_func(int arg1, int arg2){
+		int ret;
+		ret = arg1 * arg2 + arg1 / arg2;
+		return ret;
+	}
+
+	int if_func(int cdt, int arg1){
+		int ret;
+		if(cdt > 1){
+			ret = arg1 + 1;			
+		}
+		else{
+			ret = arg1 - 1;
+		}
+		
+		if(cdt == 10){
+			ret = ret * 10;
+		}
+		return ret;
 	}
 	
-	void print_all(set<u_tuple> *in_array){
-		u_tuple* cur_tuple;
-		cur_tuple = (*in_array).<id_0:nil>;
-		while(true){
-			if(cur_tuple->id_1 == nil){
-				break;
-			}
-			else{
-				printf(cur_tuple->id_1);
-				cur_tuple = (*in_array).<id_0:cur_tuple->id_1>;
-			}
-		}
-	}*/
-	
 	void main(){
-		/*set<u_tuple> int_array;
-		u_tuple t1,t2,t3,t4,t5;
-		t1.id_0 = nil;
-		t1.id_1 = 1;
-		t2.id_0 = 1;
-		t2.id_1 = 2;
-		t3.id_0 = 2;
-		t3.id_1 = 3;
-		t4.id_0 = 3;
-		t4.id_1 = 4;
-		t5.id_0 = 4;
-		t5.id_1 = nil;
-		//printf(t4.id_0);
-		int_array = int_array \-/ {&t1};
-		int_array = int_array \-/ {&t2};
-		int_array = int_array \-/ {&t3};
-		int_array = int_array \-/ {&t4};
-		int_array = int_array \-/ {&t5};
-		print_all(&int_array);*/
-		//printf(deg_to_reg(180));
-		any.<NAME:SEMAPHORE_NAME>:Semaphore_Set;
-		if(any.<NAME:SEMAPHORE_NAME>:Semaphore_Set)
-    	{	
-    		*RETURN_CODE = NO_ACTION;
-    		return;
-    	}
+		int v1,v2;
+		v1 = math_func(2, 2);
+		v2 = if_func(9, 5);
 	}
 END
